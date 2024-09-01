@@ -1,0 +1,44 @@
+<view class="topcolor" ></view>
+
+<view class="container" >  
+  <view class="container" style="height: 80rpx; width: 450rpx; position: absolute; left: 96rpx; top: 48rpx; background-color: rgba(0, 0, 0, 0.01)">
+  <text style="padding: 50rpx 30rpx; position: relative; left: 0rpx; top: 19rpx; font-weight: bold;">您想度过怎样的旅程</text>
+</view>
+  <view wx:for="{{blocks}}" wx:key="index" class="block-container" style="position: relative; left: 0rpx; top: 186rpx"> 
+    <view class="slider-text1" 
+    style="font-size: 35rpx;width: 652rpx; height: 60rpx; position: relative; left: -2rpx; top: 0rpx; display: block; box-sizing: border-box">{{item.words[item.ii]}}</view> 
+
+    <view class="slider-text1" 
+    style="font-size: 35rpx; width: 74rpx; height: 60rpx; position: absolute; left: 20rpx; top: 96rpx; display: block; box-sizing: border-box;font-weight: bold;font-size:32rpx;color: rgba({{item.hintcolor[0][0]}},{{item.hintcolor[0][1]}},{{item.hintcolor[0][2]}},{{item.hintcolor[0][3]}});">{{item.hints[0]}}</view>
+    <view class="slider-text1" 
+    style="font-size: 35rpx; width: 74rpx; height: 60rpx; position: absolute; left: 560rpx; top: 96rpx; display: block; box-sizing: border-box;font-weight: bold;font-size:32rpx;color: rgba({{item.hintcolor[1][0]}},{{item.hintcolor[1][1]}},{{item.hintcolor[1][2]}},{{item.hintcolor[1][3]}});">{{item.hints[1]}}</view>
+    <view class="container4">
+      <movable-area class="movable-area" >  
+        <movable-view
+          class="movable-view"  
+          direction="horizontal"  
+          bindchange="onBlockTouchEnd"
+          style="background-image: linear-gradient(90deg,rgba(50,50,50,0.05),rgb({{item.color[0]}}, {{item.color[1]}}, {{item.color[2]}})50%,rgba(50,50,50,0.05)); position: relative; left: 165rpx; top: 0rpx"
+          data-index="{{index}}"
+          >  
+          <view class="block" style="background-color: rgb({{item.color[0]}}, {{item.color[1]}}, {{item.color[2]}});"><text style="font-weight: bold;color: rgb(230, 225, 225); font-size: 44rpx; position:relative;top:20rpx;">{{item.w[item.i]}}</text></view>  
+      </movable-view>  
+    </movable-area></view>
+  </view>  
+</view>
+<view class="nextpagebutton">
+    <button class="btn" bindtap="button2" style="position: relative; left: 0rpx; top: 1212rpx">下一页</button>
+  </view>
+
+
+
+
+  <view class="image-container">
+      <image class="food-image" src="{{img}}" mode="aspectFill" style="width: 0rpx; height: 0rpx; display: inline-block; box-sizing: border-box"></image>
+    </view>
+
+
+
+
+
+

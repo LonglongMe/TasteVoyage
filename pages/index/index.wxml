@@ -1,0 +1,13 @@
+
+<view class="header">
+  <view class="title-container" >
+      <text class="title" style="width: 326rpx; height: 138rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 94rpx">心味之旅</text>
+      <text class="sub-title" style="position: relative; left: 2rpx; top: 84rpx; color: rgb(88,82, 88); font-weight: bold">公益—传承白族美食文化</text>
+      <text class="sub-title" style="position: relative; left: 0rpx; top: 84rpx">面向游客的美食推荐系统</text>
+      <text class="sub-title" style="position: relative; left: 1rpx; top: 1022rpx; color: silver">上海科技大学 X 上海偶的科技有限公司</text>
+    </view>
+  </view>
+  <image class="bg-image" src="/images/1.jpg" mode="aspectFill" style="width: 776rpx; height: 1454rpx; display: block; box-sizing: border-box; left: -13rpx; top: 42rpx; position: absolute"></image>
+  <view class="nextpagebutton">
+    <button class="btn" bindtap="button1" style="position: relative; left: 0rpx; top: 826rpx;background-color: rgba(255,255,255,0.6) ;">开始</button>
+  </view>

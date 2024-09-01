@@ -1,0 +1,39 @@
+<view class="container" style="position: absolute; left: 46rpx; top: 42rpx; width: 658rpx; height: 1146rpx; display: flex; box-sizing: border-box">
+  <scroll-view scroll-y="true" style="height: 1086rpx; width: 618rpx; display: block; box-sizing: border-box" show-scrollbar="false">
+    <!-- 标题 -->
+    <view class="header">
+      <text class="title">为您推荐的白族美食：</text>
+    </view>
+    <view class="header">
+      <text class="title">{{name}}</text>
+    </view>
+    <!-- 图片 -->
+    <view class="image-container">
+      <image class="food-image" src="{{img}}" mode="aspectFill"></image>
+    </view>
+  
+    <!-- 简介 -->
+    <view class="content">
+      <text class="section-title">简介</text>
+      <text class="section-content">{{brief}}</text>
+    </view>
+  
+    <!-- 文化内涵 -->
+    <view class="content">
+      <text class="section-title">文化内涵</text>
+      <text class="section-content">{{cultural}}</text>
+    </view>
+  
+    <!-- 烹饪方法 -->
+    <view class="content">
+      <text class="section-title">烹饪方法</text>
+      <text class="section-content">{{cook}}</text>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="nextpagebutton">
+  <block wx:if="{{ able < 5 }}">
+    <button class="btn" bindtap="navigateToNextPage" style="position: relative; left: 0rpx; top: 1212rpx;">再试一次</button>
+  </block>
+</view>

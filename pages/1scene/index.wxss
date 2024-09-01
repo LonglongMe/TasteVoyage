@@ -1,0 +1,112 @@
+/**index.wxss**/
+page {
+  padding-top: 54rpx;
+  background-color: #f6f6f6;
+  padding-bottom: 60rpx;
+}
+
+.text-section1_1 {
+  position: absolute;
+  top: 20%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  font-family: 'Bitstream Vera Serif Bold', sans-serif;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+
+}
+
+next-button {
+
+  margin-top: 300px;
+  padding: 10px 20px;
+  background-color: #7e43cabe;
+  border-radius: 5px;
+  border-top: 1px solid #007aff;
+  /* 上边框 */
+  border-right: 1px solid #007aff;
+  /* 右边框 */
+  border-bottom: 1px solid #007aff;
+  /* 下面边框 */
+  border-left: 1px solid #007aff;
+  /* 左边框 */
+  z-index: 100;
+}
+
+.item {
+  height: 100%;
+  line-height: 150px;
+  text-align: center;
+}
+
+/* pages/another/cust-swiper/index.wxss */
+.swiper-item image,
+.swiper-item video {
+  width: 100%;
+  display: block;
+  height: 100%;
+  margin: 0;
+  pointer-events: none;
+}
+
+image {
+  max-width: 100%;
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+}
+
+.swiper-box {
+  height: 900rpx;
+  position: relative;
+  max-width: 750rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-top: 90rpx;
+}
+
+.swiper-box .item-box {
+  position: absolute;
+  width: 600rpx;
+  height: 800rpx;
+  top: 0;
+  bottom: 0;
+  left: 27%;
+  margin: auto;
+  transition: all 0.2s ease-in 0s;
+  opacity: 1;
+  box-shadow: 0px 13rpx 12rpx rgba(0, 0, 0, .5);
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.swiper-box .item-box.none {
+  opacity: 0;
+}
+
+.swiper-box .item-box .swiper-item {
+  width: 100%;
+  height: 100%;
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+
+
+.swiper-box .item-box {
+  transform: scale(calc(0.5 + var(--index) / 10));
+  margin-left: calc(var(--left) * 100rpx - 150rpx);
+  z-index: var(--index);
+}
+
+
+
+
+

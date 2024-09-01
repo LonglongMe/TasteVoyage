@@ -1,0 +1,22 @@
+<view class="topcolor"></view>
+
+<view class="container" style="height: 1100rpx;">
+  <view class="container2" wx:for="{{photoindex}}" wx:key="index" style="width: 652rpx; height: 1320rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+
+    <view class="list-item" wx:for="{{photoindex}}" wx:key="index" style="width: 602rpx; left: 0rpx; height: 174rpx; display: block; box-sizing: border-box">
+      <view
+        class="button-custom"
+        data-index="{{index}}"
+        bindtap="changeColor"
+        style="background-image: {{item.index === selected ? 'linear-gradient(45deg,rgb(150, 220, 220),rgb(100, 200, 200))' : 'linear-gradient(45deg,rgb(240, 240, 240),rgb(245, 245, 245))'}}; left:{{item.left}}rpx; position: absolute; top: {{item.top}}rpx; width: {{item.width}}rpx; height: {{item.height}}rpx; position: absolute; display: block; box-sizing: border-box"
+      >
+        <image style="width: {{item.width - 20}}rpx; height: {{item.height - 20}}rpx; display: inline-block; box-sizing: border-box; position: absolute; left: 10rpx; top: 10rpx; border-radius: 10rpx"
+        mode="aspectFill" src="{{item.url}}"></image>
+      </view>
+    </view>
+  </view>
+  <text style="position: absolute; left: 222rpx; top: 388rpx; width: 211rpx; height: 140rpx; font-size: large; font-weight: bold; display: block; box-sizing: border-box; border-radius: 20rpx; text-align: center; padding-top: 20rpx">{{word}}</text>
+</view>
+<view class="nextpagebutton">
+  <button class="btn" bindtap="navigateToNextPage" style="position: relative; left: 0rpx; top: 1212rpx">下一页</button>
+</view>

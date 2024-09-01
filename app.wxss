@@ -1,0 +1,84 @@
+/**app.wxss**/
+
+
+
+.topcolor{
+  width: 750rpx;
+  height: 100vh;
+  position: absolute;
+  display: block; 
+  box-sizing: border-box;
+  z-index: -1;
+}
+/*
+background-image: linear-gradient(0deg,rgb(229,218,232),rgb(250, 231, 231) 33%,rgb(250,235,238) 66%,rgb(203,214,238));*/
+.toptext {
+  position: absolute;
+  top: 110rpx;
+  left: 245rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  font-family: 'YRDZST';
+  color: rgb(133, 132, 132);
+}
+.container {
+  display:block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40rpx;
+  backdrop-filter: blur(25px);
+  text-align: center;
+  width: 650rpx; 
+  height: 75vh; 
+  position: absolute; 
+  top: 50rpx; 
+  left: 50rpx;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+}
+
+
+
+.btn {
+  position: static;
+  top: 10%; /* 如果不需要相对定位，则可以移除这一行 */
+  transform: translateX(-50%);
+  background: rgba(64, 64, 64, 0.25);
+  border-radius: 26px;
+  backdrop-filter: blur(5px);
+  color: rgb(0, 0, 0);
+  width:200rpx; /* 设置按钮的宽度为100像素 */
+  height: 120rpx; /* 设置按钮的高度为50像素 */
+  padding: 30rpx; /* 设置按钮内部的填充为10像素 */
+  font-size: 40rpx; /* 设置按钮内部文本的大小为16像素 */
+  text-align: center;
+  box-shadow: 50px 10px 140px 100px rgba(0, 0, 0, 0.15);
+  animation: floatUp2 4s ease forwards; /* 开场动画持续时间为4秒，以渐变方式结束动画并保持最终状态 */
+}
+
+/* 删除 floatUp 定义 */
+
+@keyframes floatUp2 {
+  0% {
+    opacity: 0;
+    transform: translateY(110%);
+    position: relative;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn:hover {
+  background-color: #d9d9d9;
+}
+
+.btn:active {
+  background-color: #bfbfbf;
+  box-shadow: none;
+}

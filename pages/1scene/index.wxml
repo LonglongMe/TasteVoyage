@@ -1,0 +1,19 @@
+<view class="topcolor" ></view>
+<view class="container" >  
+  <view class="container" style="height: 80rpx; width: 450rpx; position: absolute; left: 96rpx; top: 48rpx; background-color: rgba(0, 0, 0, 0.01)">
+  <text style="padding: 50rpx 30rpx; position: relative; left: 0rpx; top: 19rpx; font-weight: bold;">请选择您最心怡的风景</text>
+</view>
+
+<view class="swiper-box" bindtouchmove="tauchMove" bindtouchstart="tauchStart"  bindtouchend="tauchEnd" style="width: 640rpx; height: 672rpx; display: block; box-sizing: border-box; left: -4rpx; top: 150rpx; position: relative">
+  <view class="item-box {{item.zIndex==1?'none':''}}" wx:for="{{swiperList}}" wx:key="index" style="--index:{{item.zIndex}};--left:{{item.mLeft}}">
+    <view class="swiper-item">
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+    </view>
+  </view>
+</view>
+</view>
+
+
+<view class="nextpagebutton">
+    <button class="btn" bindtap="button1" style="position: relative; left: 0rpx; top: 1126rpx;">选好啦</button>
+  </view>
